@@ -37,20 +37,20 @@ function win(status)
     {//alert("Draw!");
       document.getElementById('draw').style.display='';
     }
-    document.getElementById('resetgame').onclick = function(){
-      mark=[0,0,0,0,0,0,0,0,0];
-      symbol=[12,13,14,15,16,17,18,19,20];
-      gameover=0;
-      for (var i = 0; i < 9; i++) {
-        mark[i]=0;
-        document.getElementById("block"+(i+1)).innerHTML="";
-      };
-      document.getElementById('uwin').style.display='none';
-      document.getElementById('iwin').style.display='none';
-      document.getElementById('draw').style.display='none';
-      document.getElementById('game').style.display='';
-    }
   },1000);
+}
+
+var resetgame = function(){
+  mark=[0,0,0,0,0,0,0,0,0];
+  symbol=[12,13,14,15,16,17,18,19,20];
+  gameover=0;
+  for (var i = 0; i < 9; i++) {
+    document.getElementById("block"+(i+1)).innerHTML="";
+  };
+  document.getElementById('uwin').style.display='none';
+  document.getElementById('iwin').style.display='none';
+  document.getElementById('draw').style.display='none';
+  document.getElementById('game').style.display='';
 }
 
 function winningstatus()
