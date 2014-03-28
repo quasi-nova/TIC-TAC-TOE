@@ -1,10 +1,19 @@
-body
-{
+body{
 	margin:0px;
-	background-color: rgb(62, 250, 84);
+	background-color: rgb(242, 242, 242);
 }
-.container
-{
+*{
+	font-family:monospace;
+}
+.title{
+	height:150px;
+	width:500px;
+	position:absolute;
+	left:120px;
+	font-size:150px;
+	color:#59C;
+}
+.container{
 	height: 600px;
 	width:600px;
 	position: absolute;
@@ -12,20 +21,36 @@ body
 	left:630px;
 	bottom:100px;
 }
-.block
-{
+.block{
 	position: absolute;
-	background-color: #DFA4A4;
+	background-color: #F7F7F7;
 	height: 200px;
 	width: 200px;
 	border: 1px solid black;
 	text-align: center;
 }
-.block:hover
-{
-	background-color: #5AC;
+.block:hover{
+	background-color: #ADF;
 	height: 200px;
 	width: 200px;
 	border: 1px solid black;
 }
-
+.gameovertitle{
+	height:680px;
+	width:100%;
+	background-color:rgba(62, 150, 184,0.2);
+}
+.gameovertitle h1{
+	color:rgb(33, 38, 133);
+	position:absolute;
+	top:200px;
+	left:450px;
+	font-size:100px;
+}
+.gameovertitle h1 input{
+	background: #069;
+	color: #FFF;
+	padding: 10px 15px;
+	border: 0;
+	border-radius: 3px;
+}

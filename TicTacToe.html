@@ -9,15 +9,9 @@
 </head>
 <body id='body'>
 <div id="game">
-	<div style="height:150px;width:500px;position:absolute;top:100px;left:120px;font-size:150px;font-family:Courier;color:rgb(122, 25, 199)">
-	TIC
-	</div>
-	<div style="height:150px;width:500px;position:absolute;top:250px;left:120px;font-size:150px;font-family:Courier;color:rgb(122, 25, 199)">
-	TAC
-	</div>
-	<div style="height:150px;width:500px;position:absolute;top:400px;left:120px;font-size:150px;font-family:Courier;color:rgb(122, 25, 199)">
-	TOE
-	</div>
+	<div style="top:100px;" class="title">TIC</div>
+	<div style="top:250px;" class="title">TAC</div>
+	<div style="top:400px;" class="title">TOE</div>
 	<div class="container">
 	<div id="block1" class="block" style="top: 0px;left: 0px;" onclick="markthebox(this)"></div>
 	<div id="block2" class="block" style="top: 0px;left: 200px;" onclick="markthebox(this)"></div>
@@ -30,9 +24,11 @@
 	<div id="block9" class="block" style="top: 400px;left: 400px;" onclick="markthebox(this)"></div>
 	</div>
 </div>
-<div style="display:none;" id="iwin"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">I Win<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div></div>
-<div style="display:none;" id="uwin"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">You Win<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div></div>
-<div style="display:none;" id="draw"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">Match Draw!<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div></div>
+<center>
+<div style="display:none;" id="iwin" class="gameovertitle"><h1>I WIN<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div>
+<div style="display:none;" id="uwin" class="gameovertitle"><h1>YOU WIN<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div>
+<div style="display:none;" id="draw" class="gameovertitle"><h1>MATCH DRAW!<br><input onclick="resetgame()" type="button" value="Play Again!"></h1></div>
+</center>
 <script type="text/javascript" src="TicTacToe.js"></script>
 </body>
 </html>
