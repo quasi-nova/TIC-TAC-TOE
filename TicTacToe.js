@@ -1,20 +1,15 @@
-var mark="global";
-var gameover="global";
+var mark=[0,0,0,0,0,0,0,0,0];
 var gameover=0;
-mark=[0,0,0,0,0,0,0,0,0];
-var symbol="global";
-symbol=[12,13,14,15,16,17,18,19,20];
+var symbol=[12,13,14,15,16,17,18,19,20];
 
 function allmarked(mark){
-	var count=0;
 	var i=0;
 	while(i<9){
 		if(mark[i]!=1)
-			count++;
-		i++;
-	}
-	if(count==9) return 1;
-	return 0;
+			return 0;
+    i++;
+  }
+	return 1;
 }
 
 function win(status){
@@ -38,6 +33,11 @@ var resetgame = function(){
   document.getElementById('iwin').style.display='none';
   document.getElementById('draw').style.display='none';
   document.getElementById('game').style.display='';
+
+  var random=Math.floor(Math.random()*9+1);
+  document.getElementById("block"+random).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
+  mark[random-1]=1;
+  symbol[random-1]=1;
 }
 
 function winningstatus(){
@@ -129,8 +129,4 @@ function markthebox(id){
   	}
   }
 }
-
-var random=Math.floor(Math.random()*9+1);
-document.getElementById("block"+random).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
-mark[random-1]=1;
-symbol[random-1]=1;
+resetgame();
